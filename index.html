@@ -1,38 +1,40 @@
 ALURAFLIX do duzin
-  
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Mundo dos Cavalos</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Raças de Cavalo</h1>
-    <script src="script.js"></script>
-</body>
-</html>body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
+ 
+import pygame
 
-h1 {
-    color: #333;
-    text-align: center;
-}
+# Inicializa o Pygame
+pygame.init()
 
-/* Estilos para as seções das raças */body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-}
+# Define as cores
+branco = (255, 255, 255)
+preto = (0, 0, 0)
 
-h1 {
-    color: #333;
-    text-align: center;
-}
+# Define as dimensões da tela
+largura = 800
+altura = 600
+tela = pygame.display.set_mode((largura, altura))
+pygame.display.set_caption("Meu Jogo de Skate")
 
-/* Estilos para as seções das raças */<section>
-    <h2>Árabe</h2>
-    <img src="alt "https://www.thesprucepets.com/thmb/DdN4Byn-t-bpL0G_E7gPXPpiWtk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/meet-the-arabian-horse-1886131-hero-64149239444241ff8e1255c2f2d5bd8b"="Cavalo Árabe">
-    <p>O cavalo árabe é conhecido por sua beleza e resistência...</p>
-</section>// 
-}
+# Cria o skate (um simples retângulo por enquanto)
+skate_x = largura // 2
+skate_y = altura - 50
+skate_largura = 50
+skate_altura = 10
+skate = pygame.Rect(skate_x, skate_y, skate_largura, skate_altura)
+
+# Loop principal do jogo
+rodando = True
+while rodando:
+    for evento in pygame.event.get():
+        if evento.type == pygame.QUIT:
+            rodando = False
+
+    # Atualiza a posição do skate (implementar o movimento aqui)
+
+    # Desenha na tela
+    tela.fill(branco)
+    pygame.draw.rect(tela, preto, skate)
+    pygame.display.update()
+
+# Finaliza o Pygame
+pygame.quit()
