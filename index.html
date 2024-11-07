@@ -1,17 +1,202 @@
 ALURAFLIX do duzin
  
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Site Sobre Cavalos</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Site de Motos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bem-vindo ao Mundo dos Cavalos!</h1>
-    <p>Este é um site dedicado aos amantes de cavalos, árabe um cavalo lindo por sua raça e por seu porte, cavalo originado da arábia.</p>
-    <img src="<iframe width="560" height="315" src="imagem do arabe" title="cavalo" frameborde" alt="Um lindo cavalo">
+    <header>
+        <div class="logo">
+            <h1>Motociclismo</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tipos">Tipos de Motos</a></li>
+                <li><a href="#fotos">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Bem-vindo ao Mundo das Motos</h2>
+        <p>Explore as melhores motos, dicas e novidades do universo motociclístico.</p>
+    </section>
+
+    <section id="tipos">
+        <h2>Tipos de Motos</h2>
+        <div class="moto-card">
+            <h3>Motocross</h3>
+            <p>Ideal para trilhas e terrenos irregulares.</p>
+        </div>
+        <div class="moto-card">
+            <h3>Sport</h3>
+            <p>Para quem gosta de velocidade e design arrojado.</p>
+        </div>
+        <div class="moto-card">
+            <h3>Cruiser</h3>
+            <p>Para longas viagens com conforto e estilo.</p>
+        </div>
+    </section>
+
+    <section id="fotos">
+        <h2>Galeria de Motos</h2>
+        <div class="gallery">
+            <img src="moto1.jpg" alt="Moto 1">
+            <img src="moto2.jpg" alt="Moto 2">
+            <img src="moto3.jpg" alt="Moto 3">
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco para saber mais sobre nossas motos.</p>
+        <form action="#">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="email" name="email" placeholder="Seu e-mail" required>
+            <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Site de Motos | Todos os direitos reservados</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
+/* Resetando o padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Cabeçalho */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Seções principais */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Cards de tipos de motos */
+.moto-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+}
+
+.moto-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Galeria de imagens */
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Formulário de contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+document.querySelector("form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Previne o envio do formulário
+    alert("Formulário enviado com sucesso!");
+});
+/meu-site-de-motos
+    /index.html
+    /style.css
+    /script.js
+    /moto1.jpg  (ou imagens)
+    /moto2.jpg
+    /moto3.jpg
